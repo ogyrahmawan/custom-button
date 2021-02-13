@@ -62,8 +62,21 @@ describe('App test', () => {
     wrapper.vm.newInputType = 'radio'
     wrapper.vm.newInputLabel = 'subcomponent radio 1'
     wrapper.vm.addSubcomponent()
-    expect(wrapper.vm.educations[0].subcomponents.length).toBe(1
-      )
+    expect(wrapper.vm.educations[0].subcomponents.length).toBe(1)
+  }),
+  it("remove component from question name", () => {
+    const wrapper = mount(App)
+    wrapper.vm.sectionSelected.name = 'name'
+    wrapper.vm.sectionSelected.buttonLabel = 'radio 2'
+    wrapper.vm.removeComponent()
+    expect(wrapper.vm.names.length).toBe(1)
+  }),
+  it("remove component from question education", () => {
+    const wrapper = mount(App)
+    wrapper.vm.sectionSelected.name = 'education'
+    wrapper.vm.sectionSelected.buttonLabel = 'radio 1'
+    wrapper.vm.removeComponent()
+    expect(wrapper.vm.educations.length).toBe(1)
   })
   
 })

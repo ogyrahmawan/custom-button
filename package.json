@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "sweetalert2": "^10.14.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -60,7 +61,11 @@
   ],
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["src/**/*.{js,vue}", "!src/main.js", "!**/node_modules/**"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!src/main.js",
+      "!**/node_modules/**"
+    ],
     "moduleNameMapper": {
       "^vue$": "vue/dist/vue.common.js"
     },
