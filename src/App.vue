@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div class="home-container d-flex mt-5">
-      <div class="section-name col-md-6">
+    <div class="home-container d-flex ">
+      <div class="section-name col-md-6 mt-5">
         <p>name</p>
         <div>
           <radio-button  v-for="(element, index) in names" :key="index" :element="element" :name="'name'"></radio-button>
         </div>
       </div>
-      <div class="section-education col-md-6">
+      <div class="section-education col-md-6 mt-5">
         <p>education</p>
         <div class="d-flex justify-content-center">
           <radio-button v-for="(element, index) in educations" :key="index" :element="element" :name="'education'"></radio-button>
